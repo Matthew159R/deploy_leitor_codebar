@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.popup-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 55;
+}
+
+.d-none {
+    display: none;
+}
+
+.scanner  {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    top:  100px;
+    left: 100px;
+    cursor: pointer;
+}
+
+.scanner p {
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    user-select: none;
+}
+
+.scanner img {
+    user-select: none;
+    width: 60px;
+}
+
+.popup-wrapper .popup {
+    width: 50%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 20px 0 0 0;
+    display: none;
+    z-index: 555;
+}
+
+.popup-wrapper .popup div:nth-of-type(1) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-family: sans-serif;
+}
+
+.popup-wrapper .popup div:nth-of-type(1) h1 {
+    font-size: 38px;
+    width: 100%;
+    font-weight: bold;
+    color: #fff; 
+    text-align: center;
+    background-color: #333; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.popup-wrapper .popup div:nth-of-type(1) h2 {
+    font-size: 40px;
+    background-color: #9a44ea;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px black;
+}
+.popup-wrapper .popup img {
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    cursor: pointer;
+}
+
+.popup-wrapper .popup div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.popup-wrapper .popup div:nth-of-type(2) input {
+    width: 100px;
+    height: 40px;
+    background-color: #c7c7c7;
+    border: 0;
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+    font-size: 20px;
+}
+
+.popup-wrapper .popup div:nth-of-type(2) div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popup-wrapper .popup div:nth-of-type(2) label {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.popup-wrapper .popup div:nth-of-type(2) #data {
+    width: 150px;
+}
+
+.popup-wrapper .popup div:nth-of-type(2) p {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.popup-wrapper .popup div:nth-of-type(2) .result {
+    background-color: #9a44ea;
+    color: white;
+    box-shadow: 2px 2px 10px black; 
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.popup-wrapper .popup div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.buttons button {
+    width: 120px;
+    height: 50px;
+    background-color: #c281ff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    font-family: sans-serif;
+    padding: 5px;
+}
+
+.popup-wrapper .popup-add-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    font-family: sans-serif;
+    padding: 20px 0 0 0;
+    display: none;
+    z-index: 555;
+}
+
+.popup-wrapper .popup-add-item h2 {
+    position: absolute;
+    top: 2px;
+}
+
+.popup-wrapper .popup-add-item div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-wrapper .popup-add-item h1 {
+    font-size: 35px;
+    width: 100%;
+    margin: 0 0 0 320px;
+    
+}
+
+.popup-wrapper .popup-add-item form {
+    padding: 30px 0 0 90px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.popup-wrapper .popup-add-item input {
+    width: 80%;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #c7c7c7;
+    font-size: 24px;
+    text-align: center;
+}
+
+.popup-wrapper .popup-add-item textarea {
+    width: 300px;
+    height: 50px;
+    background-color: #c7c7c7;
+    border-radius: 10px;
+}
+
+.popup-wrapper .popup-add-item button {
+    width: 40%;
+    height: 50px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #c281ff;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+}
+
+.popup-wrapper .popup-add-item .close {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    cursor: pointer;
+}
+
+.popup-wrapper .popup-add-item form .divFeedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-wrapper .popup-add-item form label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.popup-add-item form .divFeedback span {
+    color: red;
+}
+
+.popup-start-scanner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 5;
+}
+
+.popup-start-scanner div {
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-start-scanner div img{
+    width: 300px;
+}
+

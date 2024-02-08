@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de código de barras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="scanner">
+      <img src="iconScannerCodebar.png" alt="">
+      <p>Scanner</p>
+    </div>
+
+    <div class="popup-start-scanner">
+        <div>
+            <img src="barcode-scan.gif" alt="">
+        </div>
+    </div>
+
+    <div class="popup-wrapper">
+        <div class="popup">
+            <img src="close_popup.png" alt="" class="close">
+            <div>
+                <h1 data-js="nome_equipamento"></h1>
+                <h2 data-js="quantidade_caixas"></h2>
+            </div>
+            
+            <div>
+                <label for="quantidade">Atualizar dados</label>
+                <input type="number" id="quantidade" placeholder="Ex: 2">
+              </div>
+            <div class="buttons">
+                <button class="addEquipamentButton">Adicionar</button>
+                <button class="removeEquipamentButton">Remover</button>
+            </div>
+        </div>
+        
+        <div class="popup-add-item">
+            <img src="close_popup.png" alt="" class="close">
+            <h2>Adicionar novo equipamento</h2>
+            <form style="display: flex; flex-wrap: wrap;">
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="name">Nome:</label>
+                  <div class="divFeedback">
+                    <input type="text" id="nome_equipamento" value="Tesoura">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="quantidade_caixas">Quantidade de Caixas:</label>
+                  <div class="divFeedback">
+                    <input type="number" id="quantidade_caixas" value="5">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="quantidade_caixas_lab">Quantidade de Caixas (Lab):</label>
+                  <div class="divFeedback">
+                    <input type="number" id="quantidade_caixas_lab" value="10">
+                    <span></span>
+                  </div>
+                </div>
+
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                    <label for="quantidade_unidade_lab">Quantidade de unidades (Lab):</label>
+                    <div class="divFeedback">
+                      <input type="number" id="quantidade_unidade_lab" value="10">
+                      <span></span>
+                    </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="data_recebimento">Data de Recebimento:</label>
+                  <div class="divFeedback">
+                    <input type="date" id="data_recebimento" value="2022-01-18">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="data_validade">Data de Validade:</label>
+                  <div class="divFeedback">
+                    <input type="date" id="data_validade" value="2023-01-18">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="local_fisico_almoxarifado">Local Físico (Almoxarifado):</label>
+                  <div class="divFeedback">
+                    <input type="text" id="local_fisico_almoxarifado" value="Almoxarifado A">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="local_fisico_lab">Local Físico (Lab):</label>
+                  <div class="divFeedback">
+                    <input type="text" id="local_fisico_lab" value="Laboratório B">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="registro_data_utilizacao_aula">Data de Utilização em Aula:</label>
+                  <div class="divFeedback">
+                    <input type="date" id="registro_data_utilizacao_aula" value="2022-02-15">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="qtd_total_caixa_fechada">Quantidade Total por Caixa Fechada:</label>
+                  <div class="divFeedback">
+                    <input type="number" id="qtd_total_caixa_fechada" value="20">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="valor_caixa">Valor por Caixa:</label>
+                  <div class="divFeedback">
+                    <input type="number" id="valor_caixa" value="25.99">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="qtd_cada_aluno">Quantidade por Aluno:</label>
+                  <div class="divFeedback">
+                    <input type="number" id="qtd_cada_aluno" value="3">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="nome_fornecedor">Nome do Fornecedor:</label>
+                  <div class="divFeedback">
+                    <input type="text" id="nome_fornecedor" value="Fornecedor XYZ">
+                    <span></span>
+                  </div>
+                </div>
+                
+                <div style="flex: 0 0 48%; margin-bottom: 10px;">
+                  <label for="aulas_relacionadas">Aulas Relacionadas:</label>
+                  <div class="divFeedback">
+                    <textarea name="" id="aulas_relacionadas" cols="30" rows="10">Aula1 Aula2 Aula3</textarea>
+                    <span></span>
+                  </div>
+                </div>
+                
+                <button class="insertItem">Inserir</button>
+              </form>
+                         
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
